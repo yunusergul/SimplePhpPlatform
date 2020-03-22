@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^[A-Za-z-]+?$ index.php [NC,QSA]
+RewriteRule ^page/([A-Za-z0-9-]+)/?$    index.php?page=$1
+RewriteRule ^page/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$   sidem.php?page=$1&side=$2
+RewriteRule ^(.+)/(admin|css|fonts|ico|include|js|images)/(.*)$ $2/$3 [L]
+Options All -Indexes
+ErrorDocument 404 http://localhost/projebeta/error/404.php
+ErrorDocument 403 http://localhost/projebeta/404.php
